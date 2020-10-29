@@ -4,7 +4,8 @@ const MODERN_ACTIVITY = 15;
 const HALF_LIFE_PERIOD = 5730;
 
 module.exports = function dateSample(sampleActivity) {
-    if (typeof sampleActivity !== "string" || sampleActivity === '' || 0 >= sampleActivity || sampleActivity >= 9000 || sampleActivity === '15.1') {
+    // if (typeof sampleActivity !== "string" || sampleActivity === '' || 0 >= sampleActivity || sampleActivity >= 9000 || sampleActivity > 15) {
+    if (typeof sampleActivity !== "string" || sampleActivity === '' || 0 >= sampleActivity || sampleActivity > 15) {
         return false;
     }
     let sampleActivityCopy = Number(sampleActivity);
